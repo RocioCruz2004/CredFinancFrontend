@@ -1,0 +1,248 @@
+/* Estilos base */
+.generacion-reportes {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Títulos */
+  .titulo-reportes {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #102845;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #102845;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Filtros */
+  .filtros-container {
+    margin-bottom: 2rem;
+  }
+  
+  .filtros-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    align-items: flex-end;
+  }
+  
+  .input-container {
+    margin-bottom: 0;
+  }
+  
+  .input-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.95rem;
+  }
+  
+  .date-picker, .select-estado {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    background-color: white;
+  }
+  
+  .date-picker:focus, .select-estado:focus {
+    outline: none;
+    border-color: #4299e1;
+  }
+  
+  .btn-generar {
+    background-color: #1a62c6;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: fit-content;
+  }
+  
+  .btn-generar:hover {
+    background-color: #155a9d;
+    transform: translateY(-1px);
+  }
+  
+  /* Tabla */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
+  }
+  
+  th, td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+  }
+  
+  th {
+    background-color: #f7fafc;
+    color: #4a5568;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+  }
+  
+  td {
+    color: #2d3748;
+    font-size: 0.95rem;
+  }
+  
+  /* Estados */
+  .estado-Pagado {
+    color: #2e7d32;
+    font-weight: 600;
+  }
+  
+  .estado-Atrasado {
+    color: #c62828;
+    font-weight: 600;
+  }
+  
+  .estado-Pendiente {
+    color: #f9a825;
+    font-weight: 600;
+  }
+  
+  .no-reports {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    font-style: italic;
+  }
+  
+  /* Botones de exportación */
+  .export-buttons {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+  }
+  
+  .export-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+  }
+  
+  .export-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .excel-btn {
+    background-color: #1d6f42;
+    color: white;
+  }
+  
+  .excel-btn:hover {
+    background-color: #165a34;
+  }
+  
+  .pdf-btn {
+    background-color: #d33f3f;
+    color: white;
+  }
+  
+  .pdf-btn:hover {
+    background-color: #b03535;
+  }
+  
+  /* Mensajes */
+  .loading-message {
+    text-align: center;
+    padding: 1.5rem;
+    color: #1a62c6;
+    font-weight: 500;
+  }
+  
+  .error-message {
+    text-align: center;
+    padding: 1.5rem;
+    color: #c62828;
+    background-color: #ffebee;
+    border-radius: 8px;
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .titulo-reportes {
+      font-size: 2rem;
+    }
+    
+    .input-group {
+      grid-template-columns: 1fr;
+    }
+    
+    .export-buttons {
+      flex-direction: column;
+    }
+    
+    th, td {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .generacion-reportes {
+      padding: 1rem;
+    }
+    
+    .titulo-reportes {
+      font-size: 1.75rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+    }
+  }

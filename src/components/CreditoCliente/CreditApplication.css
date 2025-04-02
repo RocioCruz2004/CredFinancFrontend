@@ -1,0 +1,357 @@
+/* CreditApplication.css - Estilos completos */
+
+/* Estilos base */
+.credit-application-container {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f7fa;
+  }
+  
+  /* Header */
+  .credit-application-header {
+    background-color: #102845;
+    color: white;
+    padding: 1.5rem 2rem;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .credit-application-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .back-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main content */
+  .credit-application-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  /* Form styles */
+  .application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .form-section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e5eb;
+  }
+  
+  .form-section h2 {
+    color: #1a62c6;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafc;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #1a62c6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(26, 98, 198, 0.1);
+    background-color: white;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #aaa;
+    opacity: 1;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .char-counter {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.3rem;
+  }
+  
+  /* Loading and error states */
+  .loading-types {
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #f9fafc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+    color: #1a62c6;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .types-error {
+    padding: 1rem;
+    background: rgba(231, 76, 60, 0.05);
+    border-radius: 6px;
+    text-align: center;
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+  }
+  
+  .types-error p {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .retry-button {
+    background: rgba(26, 98, 198, 0.05);
+    border: 1px solid rgba(26, 98, 198, 0.2);
+    color: #1a62c6;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .retry-button:hover {
+    background: rgba(26, 98, 198, 0.1);
+  }
+  
+  /* Error styles */
+  .error {
+    border-color: #e74c3c !important;
+    background-color: rgba(231, 76, 60, 0.05) !important;
+  }
+  
+  .error:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    display: block;
+  }
+  
+  .submit-error {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: rgba(231, 76, 60, 0.05);
+    border-radius: 6px;
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    font-size: 0.9rem;
+  }
+  
+  /* Button styles */
+  .submit-button {
+    background-color: #1a62c6;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #224e99;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #1a62c6;
+  }
+  
+  /* Success message */
+  .success-message {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e5eb;
+  }
+  
+  .success-message h2 {
+    color: #1a62c6;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message p {
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Select dropdown styles */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1rem;
+    padding-right: 2rem !important;
+  }
+  
+  select option {
+    padding: 0.5rem;
+    background: white;
+  }
+  
+  select option[value=""] {
+    color: #999;
+    font-style: italic;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .credit-application-header {
+      padding: 1rem;
+    }
+    
+    .credit-application-header h1 {
+      font-size: 1.5rem;
+      padding: 0 2rem;
+    }
+    
+    .back-button {
+      position: static;
+      transform: none;
+      margin-bottom: 1rem;
+      display: inline-flex;
+    }
+    
+    .credit-application-main {
+      padding: 1rem;
+    }
+    
+    .form-section {
+      padding: 1.5rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .submit-button {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-section {
+      padding: 1.25rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 0.7rem 0.9rem;
+      font-size: 0.95rem;
+    }
+    
+    .success-message {
+      padding: 2rem 1rem;
+    }
+  }

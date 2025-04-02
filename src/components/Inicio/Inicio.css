@@ -1,0 +1,119 @@
+/* Fondo */
+.bg-blue-900 {
+    background-color: #1e3a8a; 
+  }
+
+  /* Estilos generales */
+  body, html {
+    font-family: 'Arial', sans-serif; /* Tipografía moderna */
+  }
+  
+  button {
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #155a9d;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Estilo de imagen */
+  img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Texto */
+  .text-white {
+    color: white;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem; /* Texto más grande */
+  }
+  
+  .text-3xl {
+    font-size: 2rem; /* Subtítulo más grande */
+  }
+  
+  .text-8xl {
+    font-size: 6rem;
+    font-weight: 900; /* Título más prominente */
+  }
+  
+  /* Botones */
+  button {
+    font-size: 1.5rem; /* Botones más grandes */
+    padding: 1.25rem 2.5rem;
+    max-width: 250px; /* Botones menos anchos */
+  }
+  
+  button:hover {
+    background-color: #126fa1;
+  }
+  
+  /* Animaciones */
+  .motions {
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+/* Responsividad */
+@media (max-width: 1024px) {
+    .text-9xl {
+      font-size: 6rem;
+    }
+    .text-4xl {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .text-9xl {
+      font-size: 4rem;
+      line-height: 1.1;
+    }
+    .text-4xl {
+      font-size: 2rem;
+    }
+    .text-3xl {
+      font-size: 1.5rem;
+    }
+    
+    /* Cambiar a columna en móviles */
+    .flex-row {
+      flex-direction: column;
+    }
+    
+    .flex-1 {
+      flex: none;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-9xl {
+      font-size: 3rem;
+    }
+    .text-4xl {
+      font-size: 1.5rem;
+    }
+    .text-3xl {
+      font-size: 1.25rem;
+    }
+    
+    /* Ajustar padding de botones en móviles */
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+  }
